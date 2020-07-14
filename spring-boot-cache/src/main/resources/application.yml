@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cache
+    username: root
+    password: 1554289942
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cache:
+    redis:
+      use-key-prefix: true
+      time-to-live: 1d
+
+    #开启驼峰命名原则，当数据库列名d_id和bean中实体类中的属性名dId不一致的时候
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+#debug: true
